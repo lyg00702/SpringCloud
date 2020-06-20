@@ -1,18 +1,18 @@
 spring:
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:localhost}
-    port: ${RABBIT_MQ_PORT:5672}
-    username: ${RABBIT_MQ_USERNAME:guest}
-    password: ${RABBIT_MQ_PASSWORD:guest}
+    host: 192.168.56.101
+    port: 5672
+    username: guest
+    password: guest
   redis:
-    host: ${REDIS_HOST:localhost}
-    port: ${REDIS_PORT:6379}
+    host: 192.168.56.101
+    port: 6379
     ##password: ${REDIS_PASSWORD:}
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:${DATASOURCE_DBTYPE:mysql}://${DATASOURCE_HOST:localhost}:${DATASOURCE_PORT:3306}/sc_auth?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=GMT
-    username: ${DATASOURCE_USERNAME:root}
-    password: ${DATASOURCE_PASSWORD:root123}
+    url: jdbc:mysql://192.168.56.101:3306/sc_auth?characterEncoding=UTF-8&useUnicode=true&useSSL=false&serverTimezone=GMT
+    username: root
+    password: root123
   zipkin:
     enabled: true
     sender:

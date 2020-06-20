@@ -1,15 +1,19 @@
 server:
   port: 8001
 spring:
+  profiles:
+    active: ${ENV:dev}
   application:
     name: authentication-server
   cloud:
     nacos:
       discovery:
-        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+        server-addr: ${REGISTER_HOST:192.168.56.101}:${REGISTER_PORT:8848}
       config:
-        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+        server-addr: ${REGISTER_HOST:192.168.56.101}:${REGISTER_PORT:8848}
         file-extension: yml
+        prefix: authentication
+        namespace: nick
     sentinel:
       transport:
-        dashboard: ${SENTINEL_DASHBOARD_HOST:localhost}:${SENTINEL_DASHBOARD_PORT:8021}
+        dashboard: ${SENTINEL_DASHBOARD_HOST:192.168.56.101}:${SENTINEL_DASHBOARD_PORT:8021}
