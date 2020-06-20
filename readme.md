@@ -192,6 +192,20 @@ gateway-admin可动态调整gateway-web的路由策略，测试前请先配置�
 
 6.其它已知bug修复
 
+**2020-06-20：** 
+1. nacos 升级版本到1.2.1
+2. 配置文件放到nacos
+e.g: organization
+```yaml
+spring:
+  cloud:
+    nacos:
+      config:
+        prefix: organization
+        namespace: nick
+```
+ ![nacos配置文件](https://s1.ax1x.com/2020/06/20/NQsbuQ.png)
+
 ## 联系交流
 
 ### 加入贡献代码
